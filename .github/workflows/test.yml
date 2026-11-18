@@ -1,0 +1,18 @@
+
+name: AWS Runner Test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: self-hosted
+
+    steps:
+      - name: Check AWS Ubuntu
+        run: |
+          echo "Hello from AWS EC2!"
+          whoami
+          hostname
+          pwd
+          df -h
